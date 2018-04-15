@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.theon.expensetracker.ManualAdd">
+
+    <EditText
+        android:id="@+id/expenseItem"
+        android:layout_width="256dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/cost"
+        android:layout_alignLeft="@+id/cost"
+        android:layout_alignStart="@+id/cost"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="70dp"
+        android:hint="What was it for?" />
+
+    <EditText
+        android:id="@+id/cost"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/cancelBtn1"
+        android:layout_alignStart="@+id/cancelBtn1"
+        android:layout_alignTop="@+id/imageView2"
+        android:hint="How much?" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="19dp"
+        android:layout_toEndOf="@+id/categories"
+        android:layout_toRightOf="@+id/categories"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <Spinner
+        android:id="@+id/month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cancelBtn1"
+        android:layout_alignRight="@+id/cancelBtn1"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/categoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+
+        android:layout_above="@+id/cancelBtn1"
+        android:layout_alignLeft="@+id/month"
+        android:layout_alignStart="@+id/month"
+        android:layout_marginBottom="49dp"
+        android:text="Category"
+        tools:layout_editor_absoluteX="43dp" />
+
+    <Spinner
+        android:id="@+id/categories"
+        android:layout_width="178dp"
+        android:layout_height="37dp"
+        android:layout_alignTop="@+id/categoryText"
+        android:layout_toEndOf="@+id/cost"
+        android:layout_toRightOf="@+id/categoryText"
+        tools:layout_editor_absoluteX="190dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <Button
+        android:id="@+id/cancelBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/saveBtn1"
+        android:layout_alignBottom="@+id/saveBtn1"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:text="Cancel"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <Button
+        android:id="@+id/saveBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/categories"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/categories"
+        android:layout_marginBottom="48dp"
+        android:text="Save"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="25dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        app:srcCompat="@drawable/dollar" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="25dp"
+        android:layout_height="46dp"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/calendar" />
+
+    <Spinner
+        android:id="@+id/date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/month"
+        android:layout_toLeftOf="@+id/saveBtn1"
+        android:layout_toStartOf="@+id/saveBtn1" />
+
+    <Spinner
+        android:id="@+id/year"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/month" />
+
+
+</RelativeLayout>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.theon.expensetracker.HomeActivity"
+    tools:showIn="@layout/app_bar_home">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#eee">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:background="#fff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+
+
+            >
+
+            <EditText
+                android:id="@+id/accounts"
+                android:layout_width="wrap_content"
+                android:layout_height="71dp"
+                android:color="#000"
+                android:background="#fff"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:state_enabled="false" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/parsesms"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_marginBottom="80dp"
+                app:srcCompat="@drawable/ic_refresh_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
+
+        </GridLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="234dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bargraph"
+                android:layout_width="410dp"
+                android:layout_height="213dp"
+                android:background="#fff"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                tools:foreground="@id/select_date_month">
+
+            </com.github.mikephil.charting.charts.BarChart>
+
+            <Spinner
+                android:id="@+id/select_date_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#fff"
+                android:popupBackground="#fff"
+                android:entries="@array/spinner_bargraph"
+                android:gravity="bottom" />
+        </RelativeLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <ListView
+                android:id="@+id/expenseslist"
+                android:layout_width="420dp"
+                android:background="#fff"
+                android:layout_height="220dp"
+                android:layout_marginTop="10dp" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/viewTransaction"
+            android:layout_width="400dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="perform_action"
+            android:text="All Transactions"
+            android:textAlignment="viewEnd"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="234dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/budget_chart"
+                android:layout_width="410dp"
+                android:layout_height="213dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#fff">
+
+            </com.github.mikephil.charting.charts.PieChart>
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/categoryBudget"
+            android:layout_width="400dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="perform_action_budgets"
+            android:text="More info"
+            android:textAlignment="viewEnd"
+            android:layout_gravity="end"
+            android:textColor="#555"
+            android:layout_marginRight="10dp"/>
+
+        <!--<Button-->
+        <!--android:id="@+id/pie"-->
+        <!--android:layout_width="54dp"-->
+        <!--android:layout_height="32dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="pie chart" />-->
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--tools:context="com.example.theon.expensetracker.HomeActivity"-->
+    <!--tools:showIn="@layout/app_bar_home"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/frameLayout3"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="201dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="16dp"-->
+
+    <!--app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="1.0"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:layout_constraintVertical_bias="0.019">-->
+
+    <!--<com.github.mikephil.charting.charts.BarChart-->
+    <!--android:id="@+id/bargraph"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="213dp"-->
+    <!--tools:foreground="@id/select_date_month"><![CDATA[>-->
+    <!--]]></com.github.mikephil.charting.charts.BarChart>-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/select_date_month"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/base"-->
+    <!--android:entries="@array/spinner_bargraph"-->
+    <!--android:gravity="bottom" />-->
+
+
+    <!--</FrameLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/linearLayout4"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:orientation="horizontal"-->
+
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/add"-->
+    <!--android:layout_width="124dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:contentDescription="TODO"-->
+    <!--android:src="@drawable/ic_add_black_24dp" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/pie"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="pie chart" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/parsesms"-->
+    <!--android:layout_width="62dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:contentDescription="TODO"-->
+    <!--android:src="@drawable/ic_refresh_black_24dp" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/relativeLayout4"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="230dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/linearLayout4"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/frameLayout3">-->
+
+    <!--<ListView-->
+    <!--android:id="@+id/expenseslist"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+    <!--</RelativeLayout>-->
+</ScrollView>
+
+
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--tools:context="com.example.theon.expensetracker.HomeActivity"-->
+    <!--tools:showIn="@layout/app_bar_home"-->
+    <!--android:orientation="vertical">-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/select_date_month"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/base"-->
+    <!--android:entries="@array/spinner_bargraph"-->
+    <!--android:gravity="bottom" />-->
+
+    <!--<com.github.mikephil.charting.charts.BarChart-->
+    <!--android:id="@+id/bargraph"-->
+    <!--android:layout_width="353dp"-->
+    <!--android:layout_height="213dp"-->
+    <!--tools:foreground="@id/select_date_month">-->
+
+    <!--</com.github.mikephil.charting.charts.BarChart>-->
+
+
+    <!--<ListView-->
+    <!--android:id="@+id/expenseslist"-->
+    <!--android:layout_width="353dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="30dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/viewTransaction"-->
+    <!--android:layout_width="354dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:clickable="true"-->
+    <!--android:onClick="perform_action"-->
+    <!--android:text="All Transactions" />-->
+
+    <!--<com.github.mikephil.charting.charts.BarChart-->
+    <!--android:id="@+id/budgetgraph"-->
+    <!--android:layout_width="353dp"-->
+    <!--android:layout_height="213dp"-->
+    <!--android:layout_marginTop="70dp">-->
+
+    <!--</com.github.mikephil.charting.charts.BarChart>-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/pie"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="54dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="32dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="pie chart" />&ndash;&gt;-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:id="@+id/parsesms"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="56dp"-->
+    <!--android:layout_gravity="bottom|end"-->
+    <!--android:layout_margin="@dimen/fab_margin"-->
+    <!--android:layout_marginBottom="80dp"-->
+    <!--app:srcCompat="@drawable/ic_refresh_black_24dp"-->
+    <!--tools:ignore="VectorDrawableCompat" />-->
+
+
+
+
+
+
+    <!--</LinearLayout>-->
+
+
+    <!--</ScrollView>-->
+

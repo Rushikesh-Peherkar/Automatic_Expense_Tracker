@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Expense-Tracker.iml" filepath="$PROJECT_DIR$/Expense-Tracker.iml" />
+      <module fileurl="file://C:\Users\subra\Documents\Graduate_Work2\Mobile App Dev\MainProject\Expense-Tracker\Expense-Tracker.iml" filepath="C:\Users\subra\Documents\Graduate_Work2\Mobile App Dev\MainProject\Expense-Tracker\Expense-Tracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\subra\Documents\Graduate_Work2\Mobile App Dev\MainProject\Expense-Tracker\app\app.iml" filepath="C:\Users\subra\Documents\Graduate_Work2\Mobile App Dev\MainProject\Expense-Tracker\app\app.iml" />
+    </modules>
+  </component>
+</project>

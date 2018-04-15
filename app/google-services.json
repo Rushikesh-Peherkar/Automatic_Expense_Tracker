@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "146272261879",
+    "firebase_url": "https://expreport-432ec.firebaseio.com",
+    "project_id": "expreport-432ec",
+    "storage_bucket": "expreport-432ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146272261879:android:2d418fe3d2de6054",
+        "android_client_info": {
+          "package_name": "com.example.theon.expensetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146272261879-ftqkgaf9lcmlurrai7kskpg6djs4dt6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnQgWf9jUgo2enY7V7yRLkKS8K3orp39Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
